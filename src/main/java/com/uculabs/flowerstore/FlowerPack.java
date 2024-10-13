@@ -10,7 +10,12 @@ public class FlowerPack {
     @Getter
     private int quantity;
 
+    public FlowerPack(Flower flower, int quantity) {
+        this.flower = flower;
+        this.quantity = quantity;
+    }
+
     public double getPrice() {
-        return quantity * flower.getPrice();
+        return (double) quantity * flower.getPrice();
     }
 }

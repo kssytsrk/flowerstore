@@ -15,11 +15,11 @@ public class FlowerBucket {
         this.flowerPacks = new ArrayList<>();
     }
 
-    public void addFlowerPack(FlowerPack pack) {
+    public void add(FlowerPack pack) {
         flowerPacks.add(pack);
     }
 
-    public double price() {
+    public double getPrice() {
         double totalPrice = 0;
         for (FlowerPack pack : flowerPacks) {
             totalPrice += pack.getPrice();
