@@ -3,10 +3,13 @@ package com.uculabs.flowerstore;
 public class Chamomile extends Flower {
 
     public Chamomile() {
-        super(0.1, "White", 5);
+        super();
     }
 
-    public Chamomile(double sepalLength, String color, double price) {
-        super(sepalLength, color, price);
+    public Chamomile(double sepalLength, FlowerColor color, double price) {
+        super();
+        setSepalLength(sepalLength);
+        setColor(color);
+        setPrice(price);
     }
 }

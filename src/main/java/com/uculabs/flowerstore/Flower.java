@@ -1,6 +1,24 @@
 package com.uculabs.flowerstore;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
 public class Flower {
+    @Getter
+    private double sepalLength;
+    private FlowerColor color;
+    @Getter
+    private double price;
+    @Getter
+    private FlowerType flowerType;
+
+    public String getColor() {
+        return color.toString();
+    }
+}
+
+/* public class Flower {
     private double sepalLength;
     private String color;
     private double price;
@@ -48,4 +66,4 @@ public class Flower {
         System.out.println("Color: " + color);
         System.out.println("Price: " + price + " uah");
     }
-}
+} */
