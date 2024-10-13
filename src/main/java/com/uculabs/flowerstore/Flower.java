@@ -16,6 +16,13 @@ public class Flower {
     public String getColor() {
         return color.toString();
     }
+
+    public void setColor(FlowerColor color) {
+        if (color == null) {
+            throw new IllegalArgumentException("Color cannot be null");
+        }
+        this.color = color;
+    }
 }
 
 /* public class Flower {
