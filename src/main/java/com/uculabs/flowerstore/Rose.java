@@ -3,10 +3,15 @@ package com.uculabs.flowerstore;
 public class Rose extends Flower {
 
     public Rose() {
-        super(2, "Red", 30);
+        super();
+        setFlowerType(FlowerType.ROSE);
     }
 
-    public Rose(double sepalLength, String color, double price) {
-        super(sepalLength, color, price);
+    public Rose(double sepalLength, FlowerColor color, double price) {
+        super();
+        setFlowerType(FlowerType.ROSE);
+        setSepalLength(sepalLength);
+        setColor(color);
+        setPrice(price);
     }
 }
