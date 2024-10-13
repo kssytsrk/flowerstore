@@ -19,14 +19,15 @@ public class Store {
         flowerBuckets.add(bucket);
     }
 
-    public List<FlowerPack> search(FlowerColor color, Class<?> flowerType, double maxPrice) {
+    public List<FlowerPack> search(FlowerColor color, 
+                                Class<?> flowerType, double maxPrice) {
         List<FlowerPack> matchingPacks = new ArrayList<>();
 
         for (FlowerBucket bucket : flowerBuckets) {
             for (FlowerPack pack : bucket.getFlowerPacks()) {
-                if (pack.getFlower().getColor() == color.toString() &&
-                    flowerType.isInstance(pack.getFlower()) &&
-                    pack.getPrice() <= maxPrice) {
+                if (pack.getFlower().getColor() == color.toString() 
+                    && flowerType.isInstance(pack.getFlower()) 
+                    && pack.getPrice() <= maxPrice) {
                     matchingPacks.add(pack);
                 }
             }
